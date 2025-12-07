@@ -16,8 +16,6 @@ public class DataTypeCheck {
         System.out.println(data.dou);
         System.out.println(data.ch);
         System.out.println(data.str.endsWith("a"));
-        Vehicle myCar = new Vehicle();
-        System.out.println(myCar.getColor());
 
     }
     
