@@ -44,7 +44,7 @@ public class WhatTypeofDay {
                 WhatTypeofDay.printDayType(DayOfWeek.valueOf(day));
                 ShouldIRun = 1;
             }catch(IllegalArgumentException exception){
-                System.out.println("The day you have specified does not exist.Please wake up now.");
+                System.out.println("The day you have specified does not exist.Please wake up now!!");
             }
             
         }
