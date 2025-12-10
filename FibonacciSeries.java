@@ -1,22 +1,26 @@
-import java.util.Scanner;
 public class FibonacciSeries {
-    public static void seriesCalculator(int numberofContents){
-        int f0 = 0;
-        int f1 = 1;
-
-            for(int i=0;i<numberofContents;i++){
-                    int next=f0+f1;
-                    System.out.println(f0);
-                    f0=f1;
-                    f1=next;
-                }
-            }
-}
-    
+    static  HashMap<Integer,Integer> fmap=new HashMap<>();
+    public static int seriesCalculator(int n){
+        if (fmap.containsKey(n)){
+            return fmap.get(n);
+        }
+        if(n==1){
+            return 0;
+        }
+        if(n==2){
+            return 1;
+        }
+        int fval=seriesCalculator(n-1)+seriesCalculator(n-2);
+        fmap.put(n, fval);
+        return fval;
+        }
+}   
+/*
+VALIDATION
+F(1)=0
+F(2)=1
+F(3)=F(3-1)+F(3-2)=F(2)+F(1)=1+0=1
+*/
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter : ");
-        int numberofContents = input.nextInt();
-        FibonacciSeries.seriesCalculator(numberofContents);
-        input.close();
+        System.out.println(FibonacciSeries.seriesCalculator(12));
     }
