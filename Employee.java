@@ -1,7 +1,6 @@
 public class Employee extends Person {
 
     private String posting;
-    private int salary;
     public void doWork(){
         System.out.println(this.posting);
     }
