@@ -28,7 +28,7 @@ F(2)=1
 F(3)=F(3-1)+F(3-2)=F(2)+F(1)=1+0=1
 */
     public static void main(String[] args) {
-        System.out.println(FibonacciSeries.seriesCalculator(2010));
+        System.out.println(FibonacciSeries.seriesCalculator(200));
         System.out.println(FibonacciSeries.getAllKeys(fmap));
     }
 }
