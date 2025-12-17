@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
-
+import java.util.Set;
 public class Department {
     public Proffessor findProffessorByName(List<Proffessor> proffessorList,String nameOfProff){
         for(Proffessor prof:proffessorList){
@@ -12,6 +14,8 @@ public class Department {
     }
     public static void main(String[] args) { 
     List<Proffessor> proffessorList = new ArrayList<Proffessor>(); //aggregation 
+    Set<Proffessor> pSet= new HashSet<Proffessor>();
+    
     Proffessor dr1 = new Proffessor();//obj
     Proffessor[] proffessors= new Proffessor[3];
     proffessors[0]= new Proffessor();
@@ -31,5 +35,17 @@ public class Department {
     System.out.println(proffessorList.get(0));
     Department finder=new Department();
     System.out.println(finder.findProffessorByName(proffessorList,"Kanishk").age);
+    for(int i=0;i<proffessorList.size();i++){
+        System.out.println(proffessorList.get(i)); 
+    }
+    Iterator<Proffessor> looper = proffessorList.iterator();
+    looper.next();
+    looper.remove();
+    System.out.println(proffessorList);
+    proffessorList.removeIf(p -> p.age>42);
+    System.out.println(proffessorList);
+    pSet.add(annoyingProf1);
+    pSet.add(dr1);
+    System.out.println(pSet);
     }
 }
