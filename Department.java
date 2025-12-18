@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 public class Department {
+    static Integer y=10;
     public Proffessor findProffessorByName(List<Proffessor> proffessorList,String nameOfProff){
         for(Proffessor prof:proffessorList){
             if(prof.name==nameOfProff){
@@ -13,6 +14,10 @@ public class Department {
         return null;
     }
     public static void main(String[] args) { 
+        System.out.println(y);
+        int r = Integer.reverse(y);
+        System.out.println("r="+r);
+        
     List<Proffessor> proffessorList = new ArrayList<Proffessor>(); //aggregation 
     Set<Proffessor> pSet= new HashSet<Proffessor>();
     
@@ -27,6 +32,7 @@ public class Department {
     dr1.age=20202020;
     annoyingProf1.name="Chitta";
     dr2.name="Chittapa";
+    
     proffessorList.add(annoyingProf1); 
     proffessorList.add(dr1);
     proffessorList.add(dr2);
@@ -37,6 +43,7 @@ public class Department {
     System.out.println(finder.findProffessorByName(proffessorList,"Kanishk").age);
     for(int i=0;i<proffessorList.size();i++){
         System.out.println(proffessorList.get(i)); 
+        
     }
     Iterator<Proffessor> looper = proffessorList.iterator();
     looper.next();
